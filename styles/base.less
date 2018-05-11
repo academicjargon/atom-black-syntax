@@ -35,7 +35,7 @@ atom-text-editor {
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
-    color: @light-gray;
+    color: @comment; //Was @light-gray;
   }
 
   .invisible {
@@ -55,14 +55,14 @@ atom-text-editor {
 // Syntax styles
 
 .syntax--comment {
-  color: @light-gray;
+  color: @comment; //Was @light-gray;
 }
 
 .syntax--keyword {
-  color: @purple;
+  color: @functionName; //Was @purple;
 
   &.syntax--control {
-    color: @purple;
+    color: @functionName; //Was @purple;
   }
 
   &.syntax--operator {
@@ -70,43 +70,43 @@ atom-text-editor {
   }
 
   &.syntax--other.syntax--special-method {
-    color: @blue;
+    color: @objectName; //Was @blue;
   }
 
   &.syntax--other.syntax--unit {
-    color: @orange;
+    color: @integer;
   }
 }
 
 .syntax--storage {
-  color: @purple;
+  color: @functionName; //Was @purple;
 }
 
 .syntax--constant {
-  color: @orange;
+  color: @attributeValue; //Was @orange;
 
   &.syntax--character.syntax--escape {
-    color: @cyan;
+    color: @objectMethod; //Was @cyan;
   }
 
   &.syntax--numeric {
-    color: @orange;
+    color: @attributeValue; //Was @orange;
   }
 
   &.syntax--other.syntax--color {
-    color: @cyan;
+    color: @objectMethod; //Was @cyan;
   }
 
   &.syntax--other.syntax--symbol {
-    color: @green;
+    color: @string; //Was @green;
   }
 }
 
 .syntax--variable {
-  color: @red;
+  color: @tag; //was @tag;
 
   &.syntax--interpolation {
-    color: darken(@red, 10%);
+    color: darken(@tag, 10%);
   }
 
   &.syntax--parameter.syntax--function {
@@ -115,31 +115,31 @@ atom-text-editor {
 }
 
 .syntax--invalid.syntax--illegal {
-  background-color: @red;
+  background-color: @tag; //was @tag;
   color: @syntax-background-color;
 }
 
 .syntax--string {
-  color: @green;
+  color: @string;
 
 
   &.syntax--regexp {
-    color: @cyan;
+    color: @objectMethod; //Was @cyan;
 
     .syntax--source.syntax--ruby.syntax--embedded {
-      color: @orange;
+      color: @attributeValue; //Was @orange;
     }
   }
 
   &.syntax--other.syntax--link {
-    color: @red;
+    color: @tag; //was @tag;
   }
 }
 
 .syntax--punctuation {
   &.syntax--definition {
     &.syntax--comment {
-      color: @light-gray;
+      color: @comment; //Was @light-gray;
     }
 
     &.syntax--string,
@@ -151,89 +151,89 @@ atom-text-editor {
 
     &.syntax--heading,
     &.syntax--identity {
-      color: @blue;
+      color: @objectName; //Was @blue;
     }
 
     &.syntax--bold {
-      color: @light-orange;
+      color: @JSON; //was @light-orange;
       font-weight: bold;
     }
 
     &.syntax--italic {
-      color: @purple;
+      color: @functionName; //Was @purple;
       font-style: italic;
     }
   }
 
   &.syntax--section.syntax--embedded {
-    color: darken(@red, 10%);
+    color: darken(@tag, 10%);
   }
 
 }
 
 .syntax--support {
   &.syntax--class {
-    color: @light-orange;
+    color: @JSON; //was @light-orange;
   }
 
   &.syntax--function  {
-    color: @cyan;
+    color: @objectMethod; //Was @cyan;
 
     &.syntax--any-method {
-      color: @blue;
+      color: @objectName; //Was @blue;
     }
   }
 }
 
 .syntax--entity {
   &.syntax--name.syntax--function {
-    color: @blue;
+    color: @objectName; //Was @blue;
   }
   &.syntax--name.syntax--type {
-    color: @light-orange;
+    color: @JSON; //was @light-orange;
     text-decoration: none !important;
   }
 
   &.syntax--other.syntax--inherited-class {
-    color: @green;
+    color: @string; //Was @green;
   }
   &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
-    color: @light-orange;
+    color: @JSON; //was @light-orange;
   }
 
   &.syntax--name.syntax--section {
-    color: @blue;
+    color: @objectName; //Was @blue;
   }
 
   &.syntax--name.syntax--tag {
-    color: @red;
+    color: @tag; //was @tag;
     text-decoration: none !important;
   }
 
   &.syntax--other.syntax--attribute-name {
-    color: @orange;
+    color: @attributeValue; //Was @orange;
 
     &.syntax--id {
-      color: @blue;
+      color: @objectName; //Was @blue;
     }
   }
 }
 
 .syntax--meta {
   &.syntax--class {
-    color: @light-orange;
+    color: @JSON; //was @light-orange;
   }
 
   &.syntax--link {
-    color: @orange;
+    color: @attributeValue; //Was @orange;
   }
 
   &.syntax--require {
-    color: @blue;
+    color: @objectName; //Was @blue;
   }
 
   &.syntax--selector {
-    color: @purple;
+    color: @functionName; //Was @purple;
   }
 
   &.syntax--separator {
@@ -248,48 +248,48 @@ atom-text-editor {
 
 .syntax--markup {
   &.syntax--bold {
-    color: @orange;
+    color: @attributeValue; //Was @orange;
     font-weight: bold;
   }
 
   &.syntax--changed {
-    color: @purple;
+    color: @functionName; //Was @purple;
   }
 
   &.syntax--deleted {
-    color: @red;
+    color: @tag; //was @tag;
   }
 
   &.syntax--italic {
-    color: @purple;
+    color: @functionName; //Was @purple;
     font-style: italic;
   }
 
   &.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
-    color: @blue;
+    color: @objectName; //Was @blue;
   }
 
   &.syntax--inserted {
-    color: @green;
+    color: @string; //Was @green;
   }
 
   &.syntax--list {
-    color: @red;
+    color: @tag; //was @tag;
   }
 
   &.syntax--quote {
-    color: @orange;
+    color: @attributeValue; //Was @orange;
   }
 
   &.syntax--raw.syntax--inline {
-    color: @green;
+    color: @string; //Was @green;
   }
 }
 
 .syntax--source.syntax--gfm .syntax--markup {
   -webkit-font-smoothing: auto;
   &.syntax--heading {
-    color: @green;
+    color: @string; //Was @green;
   }
 }
 
@@ -308,16 +308,16 @@ atom-text-editor[mini] .scroll-view {
 //As used in Farmers
 @white: #fff;
 @very-light-gray: #666;
-@light-gray: #62626B;
+@comment; //Was @light-gray: #62626B;
 @gray: #373b41;
 @dark-gray: #282a2e;
-@very-dark-gray: #000001;
+@very-dark-gray: @black001;
 
 @cyan: #00B9F1;
-@blue: #81DEFF;
-@purple: #A88FFE;
+@objectName; //Was @blue: #81DEFF;
+@functionName; //Was @purple: #A88FFE;
 @green: #A5F56D;
-@red: #F95FAA;
+@tag: #F95FAA;
 @orange: #FFC22C;
 @yellow: #FFC22C;
 @light-orange: #D6FF00;
@@ -327,16 +327,16 @@ atom-text-editor * {
   opacity:1;
 }
 atom-text-editor {
-  color: white;
-  background-color: rgb(0,0,0);
+  color: @white;
+  background-color: @black; //Was rgb(0,0,0)
   opacity:1;
 }
 atom-text-editor
 {
   .gutter .line-number
   {
-    color: #fff !important;
-    background-color: rgb(0,0,0);
+    color: @white !important;
+    background-color: @black; //Was rgb(0,0,0)
     opacity:1;
   }
 }
@@ -368,7 +368,7 @@ atom-text-editor::shadow {
     }
     .cursor {
         // transition: opacity 0.2s; // Makes the cursor pulse instead of blink
-        border-color: #fc0; // Light Orange
+        border-color: @scrollbar; // Light Orange
         border-width: 1px;
     }
     // Makes the bracket matcher highlight more noticeable
@@ -383,19 +383,19 @@ atom-text-editor::shadow {
     // Make fold arrows always visible
     .line-number.foldable .icon-right {
         visibility: visible !important;
-        color:#cf0 !important;
+        color:@arrow !important;
         opacity: 1;
-        //border-bottom:1px dotted #fc0;
+        //border-bottom:1px dotted @scrollbar;
     }
 }
 // Without shadow DOM support
 .scrollbars-visible-always {
   ::-webkit-scrollbar-track,
   ::-webkit-scrollbar-corner {
-    background: #000;
+    background: @black;
   }
   ::-webkit-scrollbar-thumb {
-    background: #fc0;
+    background: @scrollbar;
   }
 }
 
@@ -409,7 +409,7 @@ atom-text-editor::shadow {
 
 .syntax--entity {
   &.syntax--name.syntax--type {
-    color: @hue-6-2;
+    color: @console; //Was @hue-6-2;
   }
 
   &.syntax--other.syntax--inherited-class {
@@ -426,7 +426,7 @@ atom-text-editor::shadow {
   &.syntax--operator {
 
     &.syntax--assignment {
-      color: @hue-6-2;
+      color: @console; //Was @hue-6-2;
     }
   }
 
@@ -442,7 +442,7 @@ atom-text-editor::shadow {
   &.syntax--regexp {
 
     .syntax--source.syntax--ruby.syntax--embedded {
-      color: @hue-6-2;
+      color: @console; //Was @hue-6-2;
     }
   }
 
@@ -467,7 +467,7 @@ atom-text-editor::shadow {
     }
 
     &.syntax--bold {
-      color: @hue-6-2;
+      color: @console; //Was @hue-6-2;
       font-weight: bold;
     }
 
@@ -491,7 +491,7 @@ atom-text-editor::shadow {
 
 .syntax--meta {
   &.syntax--class {
-    color: @hue-6-2;
+    color: @console; //Was @hue-6-2;
 
     &.syntax--body,
     &.syntax--html {
