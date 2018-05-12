@@ -8,12 +8,10 @@ A truly black high contrast syntax theme to go with Atom Black UI. Seriously. It
 4. Clean up .less sheets with better, clearer comments and remove duplicate lines and overwritten styles 
 
 ## Terminal Styling ##
-I've also created some Atom-Black-compatible styles for Bash and Shell emulators on PC. 
-1. High-level instructions for the installing these are here: https://github.com/academicjargon/bash-profiles
-2. I'll provide better, beginning-to-end instructions in the future.
+Instructions for the below are here: https://github.com/academicjargon/bash-profiles
 
 ### PC Terminal Emulator Styles ###
-Also, if you are on a PC and have ConEmu, you can also download an:
+Also, if you are on a PC and have ConEmu, you can also download an
 1. Atom Black-compatible shell terminal emulator style here https://github.com/academicjargon/bash-profiles/blob/master/.bashrc
 2. Atom Black-compatible bash terminal emulator style here https://github.com/academicjargon/bash-profiles/blob/master/.profile
 
