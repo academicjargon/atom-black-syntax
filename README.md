@@ -16,7 +16,7 @@ Direct links to these profiles are below.
 I'll provide better, beginning-to-end instructions in the future.
 
 ### PC Terminal Emulator Styles ###
-Also, if you are on a PC and have ConEmu, you can also download an:
+If you are on a PC and have ConEmu, you can also download an:
 1. Atom Black-compatible shell terminal emulator style here https://github.com/academicjargon/bash-profiles/blob/master/.bashrc
 2. Atom Black-compatible bash terminal emulator style here https://github.com/academicjargon/bash-profiles/blob/master/.profile
 
