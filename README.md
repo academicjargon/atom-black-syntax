@@ -1,5 +1,5 @@
 # Atom Black Syntax #
-A truly black high contrast syntax theme to go with Atom Black UI. Seriously. It's black. Expect improvements to this theme. 
+A truly black high-contrast syntax theme for Atom. Seriously. It's black. It is based on Atom Dark but with a truly black background. Expect improvements to this theme.
 
 ## Planned Changes ##
 1. Reduce the number of bold items. E.g., make string weight normal.
@@ -8,9 +8,12 @@ A truly black high contrast syntax theme to go with Atom Black UI. Seriously. It
 4. Clean up .less sheets with better, clearer comments and remove duplicate lines and overwritten styles 
 
 ## Terminal Styling ##
-I've also created some Atom-Black-compatible styles for Bash and Shell emulators on PC. 
-1. High-level instructions for the installing these are here: https://github.com/academicjargon/bash-profiles
-2. I'll provide better, beginning-to-end instructions in the future.
+I've also built out some Atom-Black-compatible terminal and terminal emulator styles for Mac and PC.
+The mac terminal style is basically the Smyck.terminal styles.
+The PC terminal emulator styles for Bash and Shell are similar to Smyck but built separately.
+High-level Instructions for installing these are here: https://github.com/academicjargon/bash-profiles
+Direct links to these profiles are below.
+I'll provide better, beginning-to-end instructions in the future.
 
 ### PC Terminal Emulator Styles ###
 Also, if you are on a PC and have ConEmu, you can also download an:
