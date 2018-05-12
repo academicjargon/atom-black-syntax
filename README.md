@@ -9,7 +9,7 @@ Also, if you are on a PC and have ConEmu, you can also download an
 2. Atom Black-compatible bash terminal emulator style here https://github.com/academicjargon/bash-profiles/blob/master/.profile
 
 ### Mac Terminal Styles ###
-If you are on a Mac, you can also download an Atom Black-compatible terminal style [http://atom.io/packages/atom-black-syntax/Smy$
+If you are on a Mac, you can also download an Atom Black-compatible terminal style http://atom.io/packages/atom-black-syntax/Smyck.terminal
 
 ### Note ###
 This is still a work-in-progress. Will be updating as I go through the guide.
