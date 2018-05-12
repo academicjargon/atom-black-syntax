@@ -1,50 +1,20 @@
 // These colors are specific to the theme. Do not use in a package!
-
 @white: #ffffff;
-@very-light-gray: #ffffff;
+@black: #000000;
+@very-light-gray: lighten(@light-gray,100%); //Should be white;
 @light-gray: #777777;
 @gray: #0d0d0d;
 @dark-gray: #141414;
-@very-dark-gray: #1e1e1e;
-@hue-6-2: #ffffff; //Console
 
-@cyan: #22bbff; //Magenta
-@blue: #ff64ff; //Cyan
-@purple: #00c3ff; // Blue
-@green: hsl( 85, 93%, 76%); //Dark Green
-@red: #00f3ff; //Cyan - a bit lighter
-@orange: #ffc333; //Orange walked back a hair
+@cyan: #22bbff; //Cyan
+@magenta: #ff64ff; //Magenta: //Dark pink: ff64ff
+@light-magenta: #ffbbff; //Light Pink: ffbbff
+@blue: #00c3ff; // Blue
+@light-cyan: #00f3ff; //Cyan - a bit lighter
+@light-cyan-alt: #00c3ff; //Blue from bash terminal: #00c3ff
+@orange: #ffc333; //Orange, walked back a bit. //Orange from bash terminal: #ffc333
 @light-orange: #fc0;  //Orange Rich
+@green: hsl( 85, 93%, 76%); //Dark Green
 @light-green: hsl( 85, 59%, 76%); //Light Green
-@black: rgb(0,0,0);
-@nice-green: #cf0;
-
-@string: @green;
-@objectMethod: @cyan; //src in gulp.src
-@objectName: @blue; //gulp in gulp.src
-@functionName: @purple; //function in function myFunc() {}
-@functionValue: @purple; // myFunc in function myFunc() {}
-@console: @light-green; //"console" as in console.log. Also strings.
-@tag: @red; //head, html, body
-@JSON: @light-orange;  //JSON in JSON.parse
-@attributeName: @orange; //name  in name="viewport"
-@attributeValue: @orange;  //viewport  in name="viewport"
-@variableTag: @purple;  //var in var = "test"
-@variableName: @white;  //test in var = "test"
-@parameterValue: @blue;
-@objectProperty: @white;
-@objectPropertyValue: @orange;
-@integer: @orange;
-@comment: @light-gray;
-@arrow: @nice-green;
-@scrollbar: @light-orange;
-//@syntax-text-color:#fff;
-
-
-
-//Nice green: a5f575
-//Green from terminal: #a5f56d
-//Blue from bash terminal: #00c3ff
-//Orange from bash terminal: #ffc333
-//Light Pink: ffbbff
-//Dark pink: ff64ff
+@nice-green: #a5f56d; //was #cf0; Nice green: a5f575; Green from terminal: #a5f56d
+@purple: #ff64ff; //Magenta equal to @magenta

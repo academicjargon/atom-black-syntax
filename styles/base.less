@@ -1,347 +1,60 @@
 @import "syntax-variables";
-
+atom-text-editor * {
+  opacity:1;
+  font-weight:normal;
+}
 atom-text-editor {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
-
+  opacity:1;
   .wrap-guide {
     background-color: @syntax-wrap-guide-color;
   }
-
   .indent-guide {
     color: @syntax-indent-guide-color;
   }
-
   .invisible-character {
     color: @syntax-invisible-character-color;
   }
-
   .gutter {
     background-color: @syntax-gutter-background-color;
     color: @syntax-gutter-text-color;
-
     .line-number {
       &.cursor-line {
         background-color: @syntax-gutter-background-color-selected;
         color: @syntax-gutter-text-color-selected;
       }
-
       &.cursor-line-no-selection {
         color: @syntax-gutter-text-color-selected;
       }
     }
   }
-
+  .gutter .line-number {
+    color: @white !important;
+    background-color: @black; //Was rgb(0,0,0)
+    opacity:1;
+  }
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
     color: @comment; //Was @light-gray;
   }
-
   .invisible {
     color: @syntax-text-color;
   }
-
   .cursor {
     color: @syntax-cursor-color;
   }
-
   .selection .region {
     background-color: @syntax-selection-color;
   }
 }
-
-
-// Syntax styles
-
-.syntax--comment {
-  color: @comment; //Was @light-gray;
-}
-
-.syntax--keyword {
-  color: @functionName; //Was @purple;
-
-  &.syntax--control {
-    color: @functionName; //Was @purple;
-  }
-
-  &.syntax--operator {
-    color: @syntax-text-color;
-  }
-
-  &.syntax--other.syntax--special-method {
-    color: @objectName; //Was @blue;
-  }
-
-  &.syntax--other.syntax--unit {
-    color: @integer;
-  }
-}
-
-.syntax--storage {
-  color: @functionName; //Was @purple;
-}
-
-.syntax--constant {
-  color: @attributeValue; //Was @orange;
-
-  &.syntax--character.syntax--escape {
-    color: @objectMethod; //Was @cyan;
-  }
-
-  &.syntax--numeric {
-    color: @attributeValue; //Was @orange;
-  }
-
-  &.syntax--other.syntax--color {
-    color: @objectMethod; //Was @cyan;
-  }
-
-  &.syntax--other.syntax--symbol {
-    color: @string; //Was @green;
-  }
-}
-
-.syntax--variable {
-  color: @tag; //was @tag;
-
-  &.syntax--interpolation {
-    color: darken(@tag, 10%);
-  }
-
-  &.syntax--parameter.syntax--function {
-    color: @syntax-text-color;
-  }
-}
-
-.syntax--invalid.syntax--illegal {
-  background-color: @tag; //was @tag;
-  color: @syntax-background-color;
-}
-
-.syntax--string {
-  color: @string;
-
-
-  &.syntax--regexp {
-    color: @objectMethod; //Was @cyan;
-
-    .syntax--source.syntax--ruby.syntax--embedded {
-      color: @attributeValue; //Was @orange;
-    }
-  }
-
-  &.syntax--other.syntax--link {
-    color: @tag; //was @tag;
-  }
-}
-
-.syntax--punctuation {
-  &.syntax--definition {
-    &.syntax--comment {
-      color: @comment; //Was @light-gray;
-    }
-
-    &.syntax--string,
-    &.syntax--variable,
-    &.syntax--parameters,
-    &.syntax--array {
-      color: @syntax-text-color;
-    }
-
-    &.syntax--heading,
-    &.syntax--identity {
-      color: @objectName; //Was @blue;
-    }
-
-    &.syntax--bold {
-      color: @JSON; //was @light-orange;
-      font-weight: bold;
-    }
-
-    &.syntax--italic {
-      color: @functionName; //Was @purple;
-      font-style: italic;
-    }
-  }
-
-  &.syntax--section.syntax--embedded {
-    color: darken(@tag, 10%);
-  }
-
-}
-
-.syntax--support {
-  &.syntax--class {
-    color: @JSON; //was @light-orange;
-  }
-
-  &.syntax--function  {
-    color: @objectMethod; //Was @cyan;
-
-    &.syntax--any-method {
-      color: @objectName; //Was @blue;
-    }
-  }
-}
-
-.syntax--entity {
-  &.syntax--name.syntax--function {
-    color: @objectName; //Was @blue;
-  }
-  &.syntax--name.syntax--type {
-    color: @JSON; //was @light-orange;
-    text-decoration: none !important;
-  }
-
-  &.syntax--other.syntax--inherited-class {
-    color: @string; //Was @green;
-  }
-  &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
-    color: @JSON; //was @light-orange;
-  }
-
-  &.syntax--name.syntax--section {
-    color: @objectName; //Was @blue;
-  }
-
-  &.syntax--name.syntax--tag {
-    color: @tag; //was @tag;
-    text-decoration: none !important;
-  }
-
-  &.syntax--other.syntax--attribute-name {
-    color: @attributeValue; //Was @orange;
-
-    &.syntax--id {
-      color: @objectName; //Was @blue;
-    }
-  }
-}
-
-.syntax--meta {
-  &.syntax--class {
-    color: @JSON; //was @light-orange;
-  }
-
-  &.syntax--link {
-    color: @attributeValue; //Was @orange;
-  }
-
-  &.syntax--require {
-    color: @objectName; //Was @blue;
-  }
-
-  &.syntax--selector {
-    color: @functionName; //Was @purple;
-  }
-
-  &.syntax--separator {
-    background-color: @gray;
-    color: @syntax-text-color;
-  }
-}
-
-.syntax--none {
-  color: @syntax-text-color;
-}
-
-.syntax--markup {
-  &.syntax--bold {
-    color: @attributeValue; //Was @orange;
-    font-weight: bold;
-  }
-
-  &.syntax--changed {
-    color: @functionName; //Was @purple;
-  }
-
-  &.syntax--deleted {
-    color: @tag; //was @tag;
-  }
-
-  &.syntax--italic {
-    color: @functionName; //Was @purple;
-    font-style: italic;
-  }
-
-  &.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
-    color: @objectName; //Was @blue;
-  }
-
-  &.syntax--inserted {
-    color: @string; //Was @green;
-  }
-
-  &.syntax--list {
-    color: @tag; //was @tag;
-  }
-
-  &.syntax--quote {
-    color: @attributeValue; //Was @orange;
-  }
-
-  &.syntax--raw.syntax--inline {
-    color: @string; //Was @green;
-  }
-}
-
-.syntax--source.syntax--gfm .syntax--markup {
-  -webkit-font-smoothing: auto;
-  &.syntax--heading {
-    color: @string; //Was @green;
-  }
-}
-
-
 // Mini editor
-
 atom-text-editor[mini] .scroll-view {
   padding-left: 1px;
 }
-
-
-
-/*
- * Adds special sauce
- *
-//As used in Farmers
-@white: #fff;
-@very-light-gray: #666;
-@comment; //Was @light-gray: #62626B;
-@gray: #373b41;
-@dark-gray: #282a2e;
-@very-dark-gray: @black001;
-
-@cyan: #00B9F1;
-@objectName; //Was @blue: #81DEFF;
-@functionName; //Was @purple: #A88FFE;
-@green: #A5F56D;
-@tag: #F95FAA;
-@orange: #FFC22C;
-@yellow: #FFC22C;
-@light-orange: #D6FF00;
-
- */
-atom-text-editor * {
-  opacity:1;
-}
-atom-text-editor {
-  color: @white;
-  background-color: @black; //Was rgb(0,0,0)
-  opacity:1;
-}
-atom-text-editor
-{
-  .gutter .line-number
-  {
-    color: @white !important;
-    background-color: @black; //Was rgb(0,0,0)
-    opacity:1;
-  }
-}
 atom-text-editor::shadow {
-    /* show a dotted line underneath folded lines */
+    // Adds dotted line beneath fold
     .fold-marker {
         &::before {
             content: "";
@@ -388,6 +101,210 @@ atom-text-editor::shadow {
         //border-bottom:1px dotted @scrollbar;
     }
 }
+// Syntax styles
+.syntax--comment {
+  color: @comment; //Was @light-gray;
+}
+.syntax--keyword {
+  color: @functionName; //Was @purple;
+  &.syntax--control {
+    color: @functionName; //Was @purple;
+    &.syntax--assignment {
+      color: @console; //Was @hue-6-2;
+    }
+  }
+  &.syntax--operator {
+    color: @syntax-text-color;
+  }
+  &.syntax--other.syntax--special-method {
+    color: @objectName; //Was @blue;
+  }
+  &.syntax--other.syntax--unit {
+    color: @integer;
+  }
+}
+.syntax--storage {
+  color: @functionName; //Was @purple;
+}
+.syntax--constant {
+  color: @attributeValue; //Was @orange;
+  &.syntax--character.syntax--escape {
+    color: @objectMethod; //Was @cyan;
+  }
+  &.syntax--numeric {
+    color: @attributeValue; //Was @orange;
+  }
+  &.syntax--other.syntax--color {
+    color: @objectMethod; //Was @cyan;
+  }
+  &.syntax--other.syntax--symbol {
+    color: @string; //Was @green;
+  }
+}
+.syntax--variable {
+  color: @tag; //was @tag;
+  &.syntax--interpolation {
+    color: darken(@tag, 10%);
+  }
+  &.syntax--parameter.syntax--function {
+    color: @syntax-text-color;
+  }
+}
+.syntax--invalid.syntax--illegal {
+  background-color: @tag; //was @tag;
+  color: @syntax-background-color;
+}
+.syntax--string {
+  color: @string;
+  &.syntax--regexp {
+    color: @objectMethod; //Was @cyan;
+    .syntax--source.syntax--ruby.syntax--embedded {
+      color: @attributeValue; //Was @orange;
+      color: @console; //Was @hue-6-2;
+    }
+  }
+  &.syntax--other.syntax--link {
+    color: @tag; //was @tag;
+  }
+}
+.syntax--punctuation {
+  &.syntax--definition {
+    &.syntax--comment {
+      color: @comment; //Was @light-gray;
+    }
+    &.syntax--string {
+      color: @stringQuotes;
+    }
+    &.syntax--variable {
+      color: @stringAtSymbol;
+    }
+    &.syntax--parameters {
+      color: @parameterParentheses !important;
+    }
+    &.syntax--array {
+      color: @syntax-array !important;
+    }
+    &.syntax--heading {
+      color: @syntax-heading !important; //Was @blue; Not sure for what
+    }
+    &.syntax--identity {
+      color: @syntax-identity !important; //Was @blue;
+    }
+    &.syntax--bold {
+      //color: @JSON; //was @light-orange;
+      color: @syntax-bold; //Was @hue-6-2;
+      font-weight: bold;
+    }
+    &.syntax--italic {
+      color: @syntax-italic; //Was @purple;
+      font-style: italic;
+    }
+  }
+  &.syntax--section.syntax--embedded {
+    color: darken(@tag, 10%);
+  }
+}
+.syntax--support {
+  &.syntax--class {
+    color: @JSON; //was @light-orange;
+  }
+  &.syntax--function  {
+    color: @objectMethod; //Was @cyan;
+    &.syntax--any-method {
+      color: @objectName; //Was @blue;
+    }
+  }
+}
+.syntax--entity {
+  &.syntax--name.syntax--function {
+    color: @objectName; //Was @blue;
+  }
+  &.syntax--name.syntax--type {
+    color: @JSON; //was @light-orange;
+    text-decoration: none !important;
+    color: @console; //Was @hue-6-2;
+  }
+  &.syntax--other.syntax--inherited-class {
+    color: @string; //Was @green;
+  }
+  &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
+    color: @JSON; //was @light-orange;
+  }
+  &.syntax--name.syntax--section {
+    color: @objectName; //Was @blue;
+  }
+  &.syntax--name.syntax--tag {
+    color: @tag; //was @tag;
+    text-decoration: none !important;
+  }
+  &.syntax--other.syntax--attribute-name {
+    color: @attributeValue; //Was @orange;
+    &.syntax--id {
+      color: @objectName; //Was @blue;
+    }
+  }
+}
+.syntax--meta {
+  &.syntax--class {
+    color: @JSON; //was @light-orange;
+    &.syntax--body,
+    &.syntax--html {
+    }
+  }
+  &.syntax--link {
+    color: @attributeValue; //Was @orange;
+  }
+  &.syntax--require {
+    color: @objectName; //Was @blue;
+  }
+  &.syntax--selector {
+    color: @functionName; //Was @purple;
+  }
+  &.syntax--separator {
+    background-color: @gray;
+    color: @syntax-text-color;
+  }
+}
+.syntax--none {
+  color: @syntax-text-color;
+}
+.syntax--markup {
+  &.syntax--bold {
+    color: @attributeValue; //Was @orange;
+    font-weight: bold;
+  }
+  &.syntax--changed {
+    color: @functionName; //Was @purple;
+  }
+  &.syntax--deleted {
+    color: @tag; //was @tag;
+  }
+  &.syntax--italic {
+    color: @functionName; //Was @purple;
+    font-style: italic;
+  }
+  &.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+    color: @objectName; //Was @blue;
+  }
+  &.syntax--inserted {
+    color: @string; //Was @green;
+  }
+  &.syntax--list {
+    color: @tag; //was @tag;
+  }
+  &.syntax--quote {
+    color: @attributeValue; //Was @orange;
+  }
+  &.syntax--raw.syntax--inline {
+    color: @string; //Was @green;
+  }
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+  &.syntax--heading {
+    color: @string; //Was @green;
+  }
+}
 // Without shadow DOM support
 .scrollbars-visible-always {
   ::-webkit-scrollbar-track,
@@ -398,127 +315,6 @@ atom-text-editor::shadow {
     background: @scrollbar;
   }
 }
-
-
-
-//Overrides
 .syntax--underline {
   text-decoration: none !important; //didn't work
-}
-
-
-.syntax--entity {
-  &.syntax--name.syntax--type {
-    color: @console; //Was @hue-6-2;
-  }
-
-  &.syntax--other.syntax--inherited-class {
-  }
-}
-
-
-
-.syntax--keyword {
-
-  &.syntax--control {
-  }
-
-  &.syntax--operator {
-
-    &.syntax--assignment {
-      color: @console; //Was @hue-6-2;
-    }
-  }
-
-  &.syntax--other.syntax--special-method {
-  }
-
-  &.syntax--other.syntax--unit {
-  }
-}
-
-.syntax--string {
-
-  &.syntax--regexp {
-
-    .syntax--source.syntax--ruby.syntax--embedded {
-      color: @console; //Was @hue-6-2;
-    }
-  }
-
-  &.syntax--other.syntax--link {
-  }
-}
-.syntax--punctuation {
-  &.syntax--definition {
-    &.syntax--comment {
-    }
-
-    &.syntax--method-parameters,
-    &.syntax--function-parameters,
-    &.syntax--parameters,
-    &.syntax--separator,
-    &.syntax--seperator,
-    &.syntax--array {
-    }
-
-    &.syntax--heading,
-    &.syntax--identity {
-    }
-
-    &.syntax--bold {
-      color: @console; //Was @hue-6-2;
-      font-weight: bold;
-    }
-
-    &.syntax--italic {
-    }
-  }
-
-  &.syntax--section {
-    &.syntax--embedded {
-    }
-
-    &.syntax--method,
-    &.syntax--class,
-    &.syntax--inner-class {
-    }
-  }
-
-  &.syntax--terminator {
-  }
-}
-
-.syntax--meta {
-  &.syntax--class {
-    color: @console; //Was @hue-6-2;
-
-    &.syntax--body,
-    &.syntax--html {
-    }
-  }
-
-  &.syntax--method-call,
-  &.syntax--method {
-  }
-
-  &.syntax--definition {
-    &.syntax--variable {
-    }
-  }
-
-  &.syntax--link {
-  }
-
-  &.syntax--require {
-  }
-
-  &.syntax--selector {
-  }
-
-  &.syntax--separator {
-  }
-
-  &.syntax--tag {
-  }
 }
