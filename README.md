@@ -8,15 +8,15 @@ A truly black high-contrast syntax theme for Atom. Seriously. It's black. It is 
 4. Clean up .less sheets with better, clearer comments and remove duplicate lines and overwritten styles 
 
 ## Terminal Styling ##
-I've also built out some Atom-Black-compatible terminal and terminal emulator styles for Mac and PC.
-The mac terminal style is basically the Smyck.terminal styles.
+I've also built out some Atom Black-compatible terminal and terminal emulator styles for Mac and PC.
+The mac terminal style is basically Smyck.
 The PC terminal emulator styles for Bash and Shell are similar to Smyck but built separately.
 High-level Instructions for installing these are here: https://github.com/academicjargon/bash-profiles
 Direct links to these profiles are below.
 I'll provide better, beginning-to-end instructions in the future.
 
 ### PC Terminal Emulator Styles ###
-If you are on a PC and have ConEmu, you can also download an:
+If you are on a PC and have ConEmu, you can download
 1. Atom Black-compatible shell terminal emulator style here https://github.com/academicjargon/bash-profiles/blob/master/.bashrc
 2. Atom Black-compatible bash terminal emulator style here https://github.com/academicjargon/bash-profiles/blob/master/.profile
 
