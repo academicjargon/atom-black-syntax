@@ -23,7 +23,7 @@ If you are on a Mac, you can also download an Atom Black-compatible terminal sty
 ### Note ###
 This is still a work-in-progress. Will be updating as I go through the guide.
 
-### Screenshots###
+### Screenshots ###
 ![Atom Black Syntax Screenshot 1](https://raw.githubusercontent.com/academicjargon/pictures/master/atom-black-syntax.png)
 
 ![Atom Black Syntax Screenshot 2](https://raw.githubusercontent.com/academicjargon/pictures/master/atom-black-syntax2.png)
