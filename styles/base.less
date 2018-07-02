@@ -53,7 +53,7 @@ atom-text-editor {
 atom-text-editor[mini] .scroll-view {
   padding-left: 1px;
 }
-atom-text-editor::shadow {
+atom-text-editor {
     // Adds dotted line beneath fold
     .fold-marker {
         &::before {
@@ -62,8 +62,8 @@ atom-text-editor::shadow {
             position: absolute;
             left: 0;
             right: 0;
-            border-bottom: 1px dotted @syntax-invisible-character-color;
-            opacity:.3;
+            border-bottom: 1px dotted #fff;
+            opacity:.15;
         }
     }
     .editor {
