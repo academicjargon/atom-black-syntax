@@ -1,106 +1,88 @@
 @import "syntax-variables";
-atom-text-editor * {
-  opacity:1;
-  font-weight:normal;
-}
-atom-text-editor {
+atom-text-editor.editor {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
+  font-weight:normal;
   opacity:1;
-  .wrap-guide {
-    background-color: @syntax-wrap-guide-color;
-  }
-  .indent-guide {
-    color: @syntax-indent-guide-color;
-  }
-  .invisible-character {
-    color: @syntax-invisible-character-color;
-  }
-  .gutter {
-    background-color: @syntax-gutter-background-color;
-    color: @syntax-gutter-text-color;
-    .line-number {
-      &.cursor-line {
-        background-color: @syntax-gutter-background-color-selected;
-        color: @syntax-gutter-text-color-selected;
-      }
-      &.cursor-line-no-selection {
-        color: @syntax-gutter-text-color-selected;
-      }
-    }
-  }
-  .gutter .line-number {
-    color: @white !important;
-    background-color: @black; //Was rgb(0,0,0)
-    opacity:1;
-  }
-  .gutter .line-number.folded,
-  .gutter .line-number:after,
-  .fold-marker:after {
-    color: @comment; //Was @light-gray;
-  }
-  .invisible {
-    color: @syntax-text-color;
-  }
-  .cursor {
-    color: @syntax-cursor-color;
-  }
-  .selection .region {
-    background-color: @syntax-selection-color;
-  }
 }
-// Mini editor
+atom-text-editor.editor .fold-marker::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-bottom: 1px dotted #fff;
+  opacity:.15;
+}
+atom-text-editor.editor .editor .invisible-characters {
+  opacity: 1;
+}
+atom-text-editor.editor .line.cursor-line .fold-marker::after {
+  color: @syntax-text-color;
+}
+atom-text-editor.editor .line.cursor-line .fold-marker::before {
+  border-color: @syntax-text-color;
+}
+atom-text-editor.editor .cursor {
+  border-color: @scrollbar; // Light Orange
+  border-width: 1px;
+}
+atom-text-editor.editor .bracket-matcher .region {
+  border-bottom: 1px solid yellow;
+}
+atom-text-editor.editor .cursor-line {
+  background-color: @background-color-highlight;
+  width:18px;
+}
+atom-text-editor.editor .line-number.foldable .icon-right {
+  visibility: visible !important;
+  color:@arrow !important;
+  opacity: 1;
+}
 atom-text-editor[mini] .scroll-view {
   padding-left: 1px;
 }
-atom-text-editor {
-    // Adds dotted line beneath fold
-    .fold-marker {
-        &::before {
-            content: "";
-            display: block;
-            position: absolute;
-            left: 0;
-            right: 0;
-            border-bottom: 1px dotted #fff;
-            opacity:.15;
-        }
-    }
-    .editor {
-        .invisible-characters {
-            opacity: 1;
-        }
-    }
-    .line.cursor-line .fold-marker {
-        &::after {
-            color: @syntax-text-color;
-        }
-        &::before {
-          border-color: @syntax-text-color;
-        }
-    }
-    .cursor {
-        // transition: opacity 0.2s; // Makes the cursor pulse instead of blink
-        border-color: @scrollbar; // Light Orange
-        border-width: 1px;
-    }
-    // Makes the bracket matcher highlight more noticeable
-    .bracket-matcher .region {
-        border-bottom: 1px solid yellow;
-    }
-    // Highlights the cursor line
-    .cursor-line {
-        background-color: @background-color-highlight;
-        width:18px;
-    }
-    // Make fold arrows always visible
-    .line-number.foldable .icon-right {
-        visibility: visible !important;
-        color:@arrow !important;
-        opacity: 1;
-        //border-bottom:1px dotted @scrollbar;
-    }
+atom-text-editor.editor .wrap-guide {
+  background-color: @syntax-wrap-guide-color;
 }
+atom-text-editor.editor .indent-guide {
+  color: @syntax-indent-guide-color;
+}
+atom-text-editor.editor .invisible-character {
+  color: @syntax-invisible-character-color;
+}
+atom-text-editor.editor .gutter {
+  background-color: @syntax-gutter-background-color;
+  color: @syntax-gutter-text-color;
+}
+atom-text-editor.editor .line-number .cursor-line {
+  background-color: @syntax-gutter-background-color-selected;
+  color: @syntax-gutter-text-color-selected;
+}
+atom-text-editor.editor .line-number .cursor-line-no-selection {
+  color: @syntax-gutter-text-color-selected;
+}
+atom-text-editor.editor .gutter .line-number {
+  color: @white !important;
+  background-color: @black; //Was rgb(0,0,0)
+  opacity:1;
+}
+atom-text-editor.editor .gutter .line-number.folded,
+atom-text-editor.editor .gutter .line-number:after,
+atom-text-editor.editor .fold-marker:after {
+  color: @comment; //Was @light-gray;
+}
+atom-text-editor.editor .invisible {
+  color: @syntax-text-color;
+}
+atom-text-editor.editor .cursor {
+  color: @syntax-cursor-color;
+}
+atom-text-editor.editor .selection .region {
+  background-color: @syntax-selection-color;
+}
+
+// Mini editor
 // Syntax styles
 .syntax--comment {
   color: @comment; //Was @light-gray;
