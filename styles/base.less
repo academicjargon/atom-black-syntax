@@ -1,4 +1,5 @@
 @import "syntax-variables";
+
 atom-text-editor.editor {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
@@ -287,6 +288,7 @@ atom-text-editor.editor .selection .region {
     color: @string; //Was @green;
   }
 }
+
 // Without shadow DOM support
 .scrollbars-visible-always {
   ::-webkit-scrollbar-track,
@@ -298,5 +300,46 @@ atom-text-editor.editor .selection .region {
   }
 }
 .syntax--underline {
-  text-decoration: none !important; //didn't work
+  text-decoration: none;
+}
+
+// Customizations New as of 10-26-2019
+.syntax--css .syntax--property-list .syntax--property-value { // CSS value
+	color: @syntax-css-value;
+}
+.syntax--css .syntax--property-list .syntax--property-name { // CSS property
+	color: @syntax-css-property;
+}
+.syntax--css { // .less punctuation... the ampersand on line 287 above, e.g.
+	color:@syntax-css-punctuation;
+}
+span.syntax--variable.syntax--other.syntax--less:nth-child(3) { // .less values
+  color: @syntax-css-less-value;
+}
+span.syntax--string.syntax--quoted.syntax--double.syntax--html { // .less property
+  color: @syntax-css-less-property;
+}
+span.syntax--constant {
+  color: @nice-yellow;
+}
+span.syntax--constant.syntax--numeric.syntax--css {
+  color: @syntax-constant-numeric;
+}
+span.syntax--keyword.syntax--other.syntax--unit.syntax--percentage.syntax--css {
+  color:@syntax-keyword-unit;
+}
+.syntax--constant {
+  color:@syntax-constant;
+}
+.syntax--font-name {
+	color:@syntax-font-name;
+}
+.syntax--support {
+	color: @syntax-support; //Was @green;
+}
+.syntax--property-value {
+	color:@nice-green;
+}
+.syntax--support.syntax--function {
+	color:@purple;
 }
