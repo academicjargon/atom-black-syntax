@@ -73,6 +73,14 @@ atom-text-editor.editor .gutter .line-number:after,
 atom-text-editor.editor .fold-marker:after {
   color: @comment; //Was @light-gray;
 }
+atom-text-editor .gutter .line-number.git-line-modified {
+  border-left: 1px solid @git-line-modified;
+  padding-left: calc(0.5em - 2px);
+}
+atom-text-editor .gutter .line-number.git-line-added {
+  border-left: 1px solid @git-line-modified; // #cbfb89;
+  padding-left: calc(0.5em - 2px);
+}
 atom-text-editor.editor .invisible {
   color: @syntax-text-color;
 }
@@ -82,7 +90,6 @@ atom-text-editor.editor .cursor {
 atom-text-editor.editor .selection .region {
   background-color: @syntax-selection-color;
 }
-
 // Mini editor
 // Syntax styles
 .syntax--comment {
@@ -342,4 +349,10 @@ span.syntax--keyword.syntax--other.syntax--unit.syntax--percentage.syntax--css {
 }
 .syntax--support.syntax--function {
 	color:@purple;
+}
+atom-pane li.texteditor.active {
+  border-top: 1px solid @orange;
+}
+span.syntax--text.syntax--plain.syntax--null-grammar {
+  color: #fff;
 }
