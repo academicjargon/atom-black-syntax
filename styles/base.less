@@ -3,8 +3,8 @@
 atom-text-editor.editor {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
-  font-weight:normal;
-  opacity:1;
+  font-weight: normal;
+  opacity: 1;
 }
 atom-text-editor.editor .fold-marker::before {
   content: "";
@@ -13,7 +13,7 @@ atom-text-editor.editor .fold-marker::before {
   left: 0;
   right: 0;
   border-bottom: 1px dotted #fff;
-  opacity:.15;
+  opacity: 0.15;
 }
 atom-text-editor.editor .editor .invisible-characters {
   opacity: 1;
@@ -33,11 +33,11 @@ atom-text-editor.editor .bracket-matcher .region {
 }
 atom-text-editor.editor .cursor-line {
   background-color: @background-color-highlight;
-  width:18px;
+  // width:18px;
 }
 atom-text-editor.editor .line-number.foldable .icon-right {
   visibility: visible !important;
-  color:@arrow !important;
+  color: @arrow !important;
   opacity: 1;
 }
 atom-text-editor[mini] .scroll-view {
@@ -66,7 +66,7 @@ atom-text-editor.editor .line-number .cursor-line-no-selection {
 atom-text-editor.editor .gutter .line-number {
   color: @white !important;
   background-color: @black; //Was rgb(0,0,0)
-  opacity:1;
+  opacity: 1;
 }
 atom-text-editor.editor .gutter .line-number.folded,
 atom-text-editor.editor .gutter .line-number:after,
@@ -198,7 +198,7 @@ atom-text-editor.editor .selection .region {
   &.syntax--class {
     color: @JSON; //was @light-orange;
   }
-  &.syntax--function  {
+  &.syntax--function {
     color: @objectMethod; //Was @cyan;
     &.syntax--any-method {
       color: @objectName; //Was @blue;
@@ -217,7 +217,8 @@ atom-text-editor.editor .selection .region {
   &.syntax--other.syntax--inherited-class {
     color: @string; //Was @green;
   }
-  &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
+  &.syntax--name.syntax--class,
+  &.syntax--name.syntax--type.syntax--class {
     color: @JSON; //was @light-orange;
   }
   &.syntax--name.syntax--section {
@@ -311,19 +312,24 @@ atom-text-editor.editor .selection .region {
 }
 
 // Customizations New as of 10-26-2019
-.syntax--css .syntax--property-list .syntax--property-value { // CSS value
-	color: @syntax-css-value;
+.syntax--css .syntax--property-list .syntax--property-value {
+  // CSS value
+  color: @syntax-css-value;
 }
-.syntax--css .syntax--property-list .syntax--property-name { // CSS property
-	color: @syntax-css-property;
+.syntax--css .syntax--property-list .syntax--property-name {
+  // CSS property
+  color: @syntax-css-property;
 }
-.syntax--css { // .less punctuation... the ampersand on line 287 above, e.g.
-	color:@syntax-css-punctuation;
+.syntax--css {
+  // .less punctuation... the ampersand on line 287 above, e.g.
+  color: @syntax-css-punctuation;
 }
-span.syntax--variable.syntax--other.syntax--less:nth-child(3) { // .less values
+span.syntax--variable.syntax--other.syntax--less:nth-child(3) {
+  // .less values
   color: @syntax-css-less-value;
 }
-span.syntax--string.syntax--quoted.syntax--double.syntax--html { // .less property
+span.syntax--string.syntax--quoted.syntax--double.syntax--html {
+  // .less property
   color: @syntax-css-less-property;
 }
 span.syntax--constant {
@@ -333,22 +339,22 @@ span.syntax--constant.syntax--numeric.syntax--css {
   color: @syntax-constant-numeric;
 }
 span.syntax--keyword.syntax--other.syntax--unit.syntax--percentage.syntax--css {
-  color:@syntax-keyword-unit;
+  color: @syntax-keyword-unit;
 }
 .syntax--constant {
-  color:@syntax-constant;
+  color: @syntax-constant;
 }
 .syntax--font-name {
-	color:@syntax-font-name;
+  color: @syntax-font-name;
 }
 .syntax--support {
-	color: @syntax-support; //Was @green;
+  color: @syntax-support; //Was @green;
 }
 .syntax--property-value {
-	color:@nice-green;
+  color: @nice-green;
 }
 .syntax--support.syntax--function {
-	color:@purple;
+  color: @purple;
 }
 atom-pane li.texteditor.active {
   border-top: 1px solid @syntax-indent-guide-color;
