@@ -1,7 +1,7 @@
 {
   "name": "atom-black-syntax",
   "theme": "syntax",
-  "version": "0.26.0",
+  "version": "0.27.0",
   "description": "A truly black (seriously) high-contrast syntax theme to go with the equally black Atom Black UI theme",
   "keywords": [
     "syntax",
