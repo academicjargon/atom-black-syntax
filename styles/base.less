@@ -12,7 +12,7 @@ atom-text-editor.editor .fold-marker::before {
   position: absolute;
   left: 0;
   right: 0;
-  border-bottom: 1px dotted #fff;
+  border-bottom: 1px dotted @folder-marker;
   opacity: 0.15;
 }
 atom-text-editor.editor .editor .invisible-characters {
@@ -23,10 +23,6 @@ atom-text-editor.editor .line.cursor-line .fold-marker::after {
 }
 atom-text-editor.editor .line.cursor-line .fold-marker::before {
   border-color: @syntax-text-color;
-}
-atom-text-editor.editor .cursor {
-  border-color: @scrollbar; // Light Orange
-  border-width: 1px;
 }
 atom-text-editor.editor .bracket-matcher .region {
   border-bottom: 1px solid yellow;
@@ -85,6 +81,8 @@ atom-text-editor.editor .invisible {
   color: @syntax-text-color;
 }
 atom-text-editor.editor .cursor {
+  border-color: @scrollbar; // Light Orange
+  border-width: 1px;
   color: @syntax-cursor-color;
 }
 atom-text-editor.editor .selection .region {
@@ -92,9 +90,6 @@ atom-text-editor.editor .selection .region {
 }
 // Mini editor
 // Syntax styles
-.syntax--comment {
-  color: @comment; //Was @light-gray;
-}
 .syntax--keyword {
   color: @functionName; //Was @purple;
   &.syntax--control {
@@ -110,7 +105,7 @@ atom-text-editor.editor .selection .region {
     color: @objectName; //Was @blue;
   }
   &.syntax--other.syntax--unit {
-    color: @integer;
+    color: @unit; // was @integer;
   }
 }
 .syntax--storage {
@@ -301,7 +296,7 @@ atom-text-editor.editor .selection .region {
 .scrollbars-visible-always {
   ::-webkit-scrollbar-track,
   ::-webkit-scrollbar-corner {
-    background: @black;
+    background: @scrollbar;
   }
   ::-webkit-scrollbar-thumb {
     background: @scrollbar;
@@ -314,31 +309,25 @@ atom-text-editor.editor .selection .region {
 // Customizations New as of 10-26-2019
 .syntax--css .syntax--property-list .syntax--property-value {
   // CSS value
-  color: @syntax-css-value;
-}
-.syntax--css .syntax--property-list .syntax--property-name {
-  // CSS property
-  color: @syntax-css-property;
+  color: @comment; // @syntax-css-value;
 }
 .syntax--css {
   // .less punctuation... the ampersand on line 287 above, e.g.
   color: @syntax-css-punctuation;
 }
 span.syntax--variable.syntax--other.syntax--less:nth-child(3) {
-  // .less values
   color: @syntax-css-less-value;
 }
 span.syntax--string.syntax--quoted.syntax--double.syntax--html {
-  // .less property
   color: @syntax-css-less-property;
 }
 span.syntax--constant {
   color: @nice-yellow;
 }
-span.syntax--constant.syntax--numeric.syntax--css {
+.syntax--constant.syntax--numeric.syntax--css {
   color: @syntax-constant-numeric;
 }
-span.syntax--keyword.syntax--other.syntax--unit.syntax--percentage.syntax--css {
+.syntax--keyword.syntax--other.syntax--unit.syntax--percentage.syntax--css {
   color: @syntax-keyword-unit;
 }
 .syntax--constant {
@@ -350,9 +339,7 @@ span.syntax--keyword.syntax--other.syntax--unit.syntax--percentage.syntax--css {
 .syntax--support {
   color: @syntax-support; //Was @green;
 }
-.syntax--property-value {
-  color: @nice-green;
-}
+
 .syntax--support.syntax--function {
   color: @purple;
 }
@@ -360,5 +347,22 @@ atom-pane li.texteditor.active {
   border-top: 1px solid @syntax-indent-guide-color;
 }
 span.syntax--text.syntax--plain.syntax--null-grammar {
-  color: #fff;
+  color: @syntax-text-color;
+}
+
+.syntax--css {
+  color:@white;
+}
+.syntax--comment {
+  color:@light-gray;
+}
+
+.syntax--support.syntax--constant.syntax--property-value.syntax--css {
+  color:@green-terminal;
+}
+.syntax--property-name {
+  color: @light-blue-terminal;
+}
+.syntax--property-value {
+  color: @green-terminal;
 }
