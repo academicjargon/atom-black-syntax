@@ -222,6 +222,12 @@ atom-text-editor.editor .selection .region {
   &.syntax--name.syntax--tag {
     color: @tag; //was @tag;
     text-decoration: none !important;
+    &.syntax--inline.syntax--meta.syntax--html {
+      color: @blue;
+    }
+    &.syntax--css {
+      color:@purple;
+    }
   }
   &.syntax--other.syntax--attribute-name {
     color: @attributeValue; //Was @orange;
