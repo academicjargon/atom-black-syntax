@@ -86,8 +86,12 @@ atom-text-editor.editor .cursor {
   color: @syntax-cursor-color;
 }
 atom-text-editor.editor .selection .region {
+  background-color: lighten(@dark-gray, 10%); // @syntax-selection-color;
+}
+atom-panel-container atom-text-editor.editor .selection .region {
   background-color: @syntax-selection-color;
 }
+
 // Mini editor
 // Syntax styles
 .syntax--keyword {
@@ -377,4 +381,3 @@ span.syntax--text.syntax--plain.syntax--null-grammar {
 .syntax--property-value {
   color: @green-terminal;
 }
-.newz { color: @light-gray }
